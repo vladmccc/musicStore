@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<style>
+
+		/* Styling the body */
+		* {
+			padding: 0;
+			margin: 0;
+		}
+
+		/* Styling the background image by
+		giving its url and position */
+		.container {
+			height: 100vh;
+			width: 100%;
+			background-image: url(
+'https://c4.wallpaperflare.com/wallpaper/757/235/802/music-background-dark-vinyl-wallpaper-preview.jpg');
+			
+			/* Image used: */
+			background-size: cover;
+			background-position: center;
+			position: relative;
+		}
+
+		/* Styling the list tags to the
+		right of the navigation bar */
+        .container {
+            justify-content: center;
+            text-align:center;
+        }
+		.nav li {
+			float: right;
+			list-style: none;
+		}
+
+		/* Styling the anchor tags of
+		the navigation bar */
+		.nav a {
+			list-style: none;
+			height: 50px;
+			line-height: 50px;
+			font-size: 1rem;
+			font-weight: 550;
+			display: block;
+			padding: 5px 35px;
+			color: white;
+			text-decoration: none;
+		}
+
+		/* Giving position and margin
+		to the content-div */
+		.content {
+			width: 100%;
+			position: absolute;
+			top: 45%;
+		}
+
+		/* Styling the left-col by
+		giving margin */
+		.left-col {
+			margin-left: 11%;
+		}
+
+		/* Styling the my sound placed
+		in the left-col */
+		.left-col h1 {
+			font-size: 50px;
+			color: white;
+		}
+
+		/* Styling the right-col */
+		.right-col {
+			float: right;
+			margin-right: 10%;
+			margin-top: -15%;
+			display: flex;
+			align-items: center;
+		}
+
+		/* Styling the text in the right-col */
+		.right-col p {
+			font-size: 21px;
+			color: white;
+			font-weight: 650;
+			margin-right: 20px;
+		}
+
+		/* Styling the cursor type
+		of the icon to pointer */
+		#icon {
+			cursor: pointer;
+		}
+		.form-shape input, .form-shape select, .form-shape textarea{
+   width: 92%;
+   padding: 0.5rem;
+}
+
+/* Styling form-control Class */
+.form-control {
+	color:white;
+    font-family: "Times New Roman";
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+/* Styling form-control Label */
+.form-control label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Styling form-control input,
+select, textarea */
+.form-control input,
+.form-control select,
+.form-control textarea {
+    border: 1px solid #777;
+    border-radius: 2px;
+    font-family: "Times New Roman";
+    padding: 10px;
+    display: block;
+    width: 95%;
+}
+
+/* Styling form-control Radio
+button and Checkbox */
+.form-control input[type="radio"],
+.form-control input[type="checkbox"] {
+    font-weight: normal;
+    display: inline-block;
+    width: auto;
+}
+/* Styling Button */
+button {
+    border-radius: 25px;
+    background-color: #282828;
+    border: 1px solid #eb9393;
+    color: #B3B3B3;
+    font-family: "Times New Roman";
+    font-size: 21px;
+    display: block;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<ul class="nav">
+			<li><a href="event.htm">EVENT</a></li>
+			<li><a href="contact.htm">CONTACT</a></li>
+			<li><a href="artist.htm">ARTIST</a></li>
+			<li><a href="index.htm">HOME</a></li>
+		</ul>
+	</div>
+
+	<div class="content">
+		<div class="left-col">
+			<h1>CONTACT</h1>
+		</div>
+
+		<div class="right-col">
+            <form id="form">
+
+                <!-- Details -->
+                <div class="form-control">
+                    <label for="name" id="label-name">
+                        Name
+                    </label>
+        
+                    <!-- Input Type Text -->
+                    <input type="text"
+                        id="name"
+                        placeholder="Enter your Name" />
+                </div>
+        
+                <div class="form-control">
+                    <label for="email" id="label-email">
+                        Email
+                    </label>
+        
+                    <!-- Input Type Email-->
+                    <input type="email"
+                        id="email"
+                        placeholder="Enter your Email" />
+                </div>
+        
+                <div class="form-control">
+                    <label for="OrderNumber" id="label-OrderNumber">
+                        Phone Number
+                    </label>
+        
+                    <!-- Input Type Text -->
+                    <input type="text"
+                        id="OrderNumber"
+                        placeholder="Enter your Phone Number (If Applicable)" />
+                </div>
+                <div class="form-control">
+                    <label for="role" id="label-role">
+                        What are you writing about?
+                    </label>
+                    
+                    <!-- Dropdown options -->
+                    <select name="role" id="role">
+                        <option value="person">Booking</option>
+                        <option value="online">Shows</option>
+                        <option value="callInDelivery">Commericial Use</option>
+                        <option value="deliveryApp">Parties</option>
+                    </select>
+                </div>
+                    <br>
+                    <div class="form-control">
+                        <label for="comment">
+                            Please Describe How We Can Help You
+                        </label>
+                    </div>
+                    <div class="form-control">
+            
+                        <!-- multi-line text input control -->
+                        <textarea name="comment" id="comment"
+                            placeholder="Enter your comment here">
+                        </textarea>
+                    </div>
+                    <button type="submit" value="submit">
+                        Submit
+                    </button>
+                </div>
+		</div>
+	</div>
+
+	<audio id="mysound">
+		<source src="https://static.taketones.com/storage/audio/6c8349cc7260ae62e3b1396831a8398f/sunsets-preview-full.mp3" type="audio/mp3">
+	</audio>
+
+	<script>
+		var mysound = document.getElementById("mysound");
+		var icon = document.getElementById("icon");
+
+		// Creating a function that will change
+		// pause to play and vice-versa
+		icon.onclick = function() {
+			if (mysound.paused) {
+
+				// If paused then play the
+				// music and change the image
+				mysound.play();
+				icon.src =
+"https://www.freeiconspng.com/thumbs/pause-button-png/pause-button-png-7.png";
+			} else {
+
+				// If playing then pause the
+				// music and change the image
+				mysound.pause();
+				icon.src =
+"https://www.freeiconspng.com/thumbs/button-icon-png/play-button-icon-png-17.png";
+			}
+		}
+	</script>
+</body>
+
+</html>
